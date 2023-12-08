@@ -1,7 +1,6 @@
-FROM python:3.9-alpine
-WORKDIR /app
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
+FROM python:3.11
+WORKDIR /
 COPY . .
-EXPOSE 5000
-CMD ["python", "./services/products.py"]
+RUN pip install -r requirements.txt
+EXPOSE 5500
+CMD ["python", "main.py"]

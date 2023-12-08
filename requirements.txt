@@ -6,3 +6,5 @@ pandas
 basemap
 requests
 pyjwt
+fastapi
+gunicorn
