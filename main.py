@@ -49,7 +49,7 @@ def login():
     hashpass = user_row[1]
     salt = user_row[2]
     if verified(username, password, salt, hashpass):
-        token = jwt.encode({"username" : username}, SECRET_KEY, algorithm="HS256")
+        token = jwt.encode({"username" : username}, ["SECRET_KEY"], algorithm="HS256")
         return redirect(url_for('index')+"?username="+username+"&token="+token)
     return jsonify("You're not authorized to use this feature."), 401
 
