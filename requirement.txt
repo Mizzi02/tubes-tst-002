@@ -1,0 +1,8 @@
+flask
+matplotlib
+itsdangerous
+mysql-connector-python
+pandas
+basemap
+requests
+pyjwt
